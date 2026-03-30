@@ -19,17 +19,22 @@ PKG_DIR = os.path.join(HERE, "花字输出结果")
 
 
 def _find_font() -> str:
-    """每次调用时实时定位字体，兼容开发目录和发布包目录"""
+    """定位字体文件，本地优先，云端自动下载"""
     base = os.path.dirname(os.path.abspath(__file__))
-    # 优先同级目录
-    p = os.path.join(base, "字体资源", "标准字体.ttf")
-    if os.path.exists(p):
-        return p
-    # 兼容开发目录：上一级
-    p2 = os.path.join(os.path.dirname(base), "字体资源", "标准字体.ttf")
-    if os.path.exists(p2):
-        return p2
-    return p  # 找不到时返回同级路径，让 Pillow 给出明确报错
+    # 本地开发路径
+    for candidate in [
+        os.path.join(base, "字体资源", "标准字体.ttf"),
+        os.path.join(os.path.dirname(base), "字体资源", "标准字体.ttf"),
+    ]:
+        if os.path.exists(candidate):
+            return candidate
+    # 云端：下载到 /tmp
+    cached = "/tmp/标准字体.ttf"
+    if not os.path.exists(cached):
+        import urllib.request
+        url = "https://github.com/wuyibo19961010-glitch/kuaiying-huazi/releases/download/font/标准字体.ttf"
+        urllib.request.urlretrieve(url, cached)
+    return cached
 
 W = H = 300
 BG = (26, 26, 26)
