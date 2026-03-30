@@ -15,7 +15,7 @@ HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE))
 from render_covers import render_cover as _render_cover
 
-OUTPUT_DIR = HERE / "花字输出结果_文生"
+OUTPUT_DIR = Path("/tmp") / "huazi_output"
 
 # ════════════════════════════════════════════════════════════════
 # 颜色库（基于真实参考调色）
@@ -290,8 +290,7 @@ def build_info(style_desc: str, effect_type: str, seed: int) -> dict:
 # 渲染工具
 # ════════════════════════════════════════════════════════════════
 def render_to_pil(info: dict) -> Image.Image:
-    tmp_path = OUTPUT_DIR / "_tmp_render.webp"
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    tmp_path = Path("/tmp") / "_tmp_render.webp"
     _render_cover(info, str(tmp_path))
     return Image.open(tmp_path).copy()
 
@@ -450,7 +449,6 @@ for k, v in [("results", []), ("selected", set()), ("tune_idx", None)]:
 
 # ── 生成逻辑 ─────────────────────────────────────────────────
 if generate_btn and style_input.strip():
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     results = []
     progress = st.progress(0)
     status = st.empty()

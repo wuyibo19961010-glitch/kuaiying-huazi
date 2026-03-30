@@ -15,8 +15,21 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FONT_PATH = os.path.join(HERE, "字体资源", "标准字体.ttf")
-PKG_DIR   = os.path.join(HERE, "花字输出结果")
+PKG_DIR = os.path.join(HERE, "花字输出结果")
+
+
+def _find_font() -> str:
+    """每次调用时实时定位字体，兼容开发目录和发布包目录"""
+    base = os.path.dirname(os.path.abspath(__file__))
+    # 优先同级目录
+    p = os.path.join(base, "字体资源", "标准字体.ttf")
+    if os.path.exists(p):
+        return p
+    # 兼容开发目录：上一级
+    p2 = os.path.join(os.path.dirname(base), "字体资源", "标准字体.ttf")
+    if os.path.exists(p2):
+        return p2
+    return p  # 找不到时返回同级路径，让 Pillow 给出明确报错
 
 W = H = 300
 BG = (26, 26, 26)
@@ -25,7 +38,7 @@ FONT_SIZE = 104  # 匹配标准封面
 
 
 def fnt(sz):
-    return ImageFont.truetype(FONT_PATH, sz)
+    return ImageFont.truetype(_find_font(), sz)
 
 
 def hex_to_rgb(h):
@@ -258,9 +271,12 @@ def render_cover(info, output_path, text_str=None):
 
         img = Image.alpha_composite(img, inner_layer)
 
-    # 保存
+    # 保存（支持文件路径或 BytesIO）
     final = img.convert("RGB")
-    final.save(output_path, "WEBP", quality=92)
+    if hasattr(output_path, 'write'):
+        final.save(output_path, "PNG")
+    else:
+        final.save(output_path, "WEBP", quality=92)
 
 
 def main():
