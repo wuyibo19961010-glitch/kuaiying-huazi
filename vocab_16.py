@@ -1,0 +1,91 @@
+# vocab_16.py — 动作/状态/行为词（100词）
+
+VOCAB_16 = {
+    # ── 运动/速度 ────────────────────────────────────────
+    "奔跑": {"palette": ["#ff6d00","#ff3d00","#ffea00","#1565c0","#0d47a1"], "effect": "3D立体", "glow": True},
+    "飞翔": {"palette": ["#e1f5fe","#b3e5fc","#81d4fa","#4fc3f7","#00e5ff"], "effect": "双色渐变", "glow": True},
+    "飞": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#00e5ff","#40c4ff"], "effect": "双色渐变", "glow": True},
+    "冲": {"palette": ["#ff6d00","#ff3d00","#ffea00","#1a1a1a","#000000"], "effect": "霓虹发光", "glow": True},
+    "冲锋": {"palette": ["#ff1744","#ff6d00","#ffea00","#1565c0","#0d47a1"], "effect": "3D立体", "glow": True},
+    "加速": {"palette": ["#ff6d00","#ff3d00","#ffea00","#00e5ff","#7c4dff"], "effect": "霓虹发光", "glow": True},
+    "极速": {"palette": ["#ff3d00","#dd2c00","#ffea00","#00e5ff","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "速度": {"palette": ["#ff6d00","#ff3d00","#00e5ff","#7c4dff","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "瞬间": {"palette": ["#ffffff","#fff9c4","#00e5ff","#7c4dff","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "起飞": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#fff9c4","#ffe082"], "effect": "双色渐变", "glow": True},
+    "腾飞": {"palette": ["#ff8f00","#ffa000","#ffb300","#e3f2fd","#90caf9"], "effect": "双色渐变", "glow": True},
+    "跳跃": {"palette": ["#ff4081","#ff6d00","#ffea00","#69ff47","#00e5ff"], "effect": "多层描边", "glow": True},
+    "突破": {"palette": ["#ff6d00","#ff3d00","#1565c0","#0d47a1","#ff1744"], "effect": "3D立体", "glow": True},
+    "超越": {"palette": ["#ff6d00","#ff3d00","#ffea00","#1565c0","#0d47a1"], "effect": "3D立体", "glow": True},
+    "乘风": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#64b5f6","#42a5f5"], "effect": "双色渐变", "glow": True},
+
+    # ── 积极行为 ────────────────────────────────────────
+    "创造": {"palette": ["#ff6d00","#ff3d00","#ffd54f","#7c4dff","#00e5ff"], "effect": "3D立体", "glow": True},
+    "创新": {"palette": ["#7c4dff","#aa00ff","#00e5ff","#1de9b6","#ff4081"], "effect": "霓虹发光", "glow": True},
+    "探索": {"palette": ["#1565c0","#0d47a1","#1b5e20","#2e7d32","#ffd54f"], "effect": "3D立体", "glow": True},
+    "发现": {"palette": ["#ffd54f","#ffb300","#1565c0","#0d47a1","#1b5e20"], "effect": "双色渐变", "glow": True},
+    "挑战": {"palette": ["#ff1744","#ff6d00","#ffea00","#1565c0","#0d47a1"], "effect": "3D立体", "glow": True},
+    "努力": {"palette": ["#ff6d00","#ff3d00","#1565c0","#0d47a1","#ffd54f"], "effect": "3D立体", "glow": True},
+    "坚持": {"palette": ["#ff6d00","#e64a19","#1565c0","#0d47a1","#ffd54f"], "effect": "3D立体", "glow": False},
+    "奋斗": {"palette": ["#ff1744","#ff6d00","#ffea00","#1565c0","#0d47a1"], "effect": "3D立体", "glow": True},
+    "拼命": {"palette": ["#ff1744","#d50000","#ff6d00","#ff3d00","#1a1a1a"], "effect": "霓虹发光", "glow": True},
+    "燃": {"palette": ["#ff3d00","#dd2c00","#bf360c","#ff6d00","#ffea00"], "effect": "霓虹发光", "glow": True},
+    "爆发": {"palette": ["#ff3d00","#dd2c00","#ffea00","#ffffff","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "觉醒": {"palette": ["#ffd54f","#ffb300","#7c4dff","#aa00ff","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "蜕变": {"palette": ["#7c4dff","#aa00ff","#00e5ff","#1de9b6","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "逆袭": {"palette": ["#ff1744","#ff6d00","#ffd54f","#1a1a2e","#000000"], "effect": "霓虹发光", "glow": True},
+    "崛起": {"palette": ["#ff6d00","#ff3d00","#ffd54f","#1565c0","#0d47a1"], "effect": "3D立体", "glow": True},
+
+    # ── 宁静/沉淀 ────────────────────────────────────────
+    "沉淀": {"palette": ["#90a4ae","#78909c","#607d8b","#546e7a","#455a64"], "effect": "简约", "glow": False},
+    "静": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#64b5f6","#42a5f5"], "effect": "简约", "glow": False},
+    "禅": {"palette": ["#a5d6a7","#81c784","#66bb6a","#78909c","#607d8b"], "effect": "简约", "glow": False},
+    "冥想": {"palette": ["#e8eaf6","#c5cae9","#9fa8da","#7986cb","#5c6bc0"], "effect": "简约", "glow": False},
+    "沉思": {"palette": ["#90a4ae","#78909c","#607d8b","#9fa8da","#7986cb"], "effect": "简约", "glow": False},
+    "流动": {"palette": ["#40c4ff","#00b0ff","#0091ea","#01579b","#003c8f"], "effect": "双色渐变", "glow": True},
+    "游走": {"palette": ["#b0bec5","#90a4ae","#78909c","#e3f2fd","#bbdefb"], "effect": "双色渐变", "glow": False},
+    "漂浮": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#ffffff","#f5f5f5"], "effect": "双色渐变", "glow": False},
+    "消散": {"palette": ["#b0bec5","#90a4ae","#78909c","#cfd8dc","#eceff1"], "effect": "双色渐变", "glow": False},
+    "凝固": {"palette": ["#90a4ae","#78909c","#607d8b","#546e7a","#37474f"], "effect": "浮雕", "glow": False},
+
+    # ── 变化/转化 ────────────────────────────────────────
+    "燃烧": {"palette": ["#ff3d00","#dd2c00","#bf360c","#ff6d00","#ffd54f"], "effect": "霓虹发光", "glow": True},
+    "熔化": {"palette": ["#ff6d00","#ff3d00","#ffd54f","#e3f2fd","#90caf9"], "effect": "双色渐变", "glow": True},
+    "凝结": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#64b5f6","#42a5f5"], "effect": "双色渐变", "glow": False},
+    "爆炸": {"palette": ["#ff3d00","#dd2c00","#ffffff","#ffd54f","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "碰撞": {"palette": ["#ff1744","#ff6d00","#ffd54f","#7c4dff","#00e5ff"], "effect": "霓虹发光", "glow": True},
+    "融合": {"palette": ["#ff6d00","#ff4081","#7c4dff","#00e5ff","#1de9b6"], "effect": "双色渐变", "glow": True},
+    "交融": {"palette": ["#ff4081","#7c4dff","#00e5ff","#ff6d00","#1de9b6"], "effect": "双色渐变", "glow": True},
+    "分裂": {"palette": ["#ff1744","#7c4dff","#00e5ff","#ff6d00","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "扭曲": {"palette": ["#7c4dff","#aa00ff","#ff4081","#ff6d00","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "重生": {"palette": ["#69ff47","#00e676","#1de9b6","#fff9c4","#ff6d00"], "effect": "霓虹发光", "glow": True},
+
+    # ── 上升/成长 ────────────────────────────────────────
+    "成长": {"palette": ["#e8f5e9","#c8e6c9","#a5d6a7","#66bb6a","#43a047"], "effect": "双色渐变", "glow": True},
+    "进化": {"palette": ["#69ff47","#00e676","#7c4dff","#aa00ff","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "升华": {"palette": ["#7c4dff","#aa00ff","#ffffff","#e3f2fd","#bbdefb"], "effect": "霓虹发光", "glow": True},
+    "飞升": {"palette": ["#fff9c4","#ffe082","#7c4dff","#aa00ff","#e3f2fd"], "effect": "霓虹发光", "glow": True},
+    "升级": {"palette": ["#ffd54f","#ffb300","#7c4dff","#00e5ff","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "进阶": {"palette": ["#7c4dff","#aa00ff","#00e5ff","#ffd54f","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "解锁": {"palette": ["#ffd54f","#ffb300","#7c4dff","#aa00ff","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "开启": {"palette": ["#ffd54f","#ffb300","#ff8f00","#00e5ff","#7c4dff"], "effect": "霓虹发光", "glow": True},
+    "破壳": {"palette": ["#ffd54f","#ffb300","#1de9b6","#69ff47","#ff6d00"], "effect": "霓虹发光", "glow": True},
+    "绽放": {"palette": ["#fce4ec","#f48fb1","#e91e63","#ffd54f","#ff8f00"], "effect": "双色渐变", "glow": True},
+
+    # ── 毁灭/消亡 ────────────────────────────────────────
+    "消失": {"palette": ["#b0bec5","#90a4ae","#78909c","#607d8b","#37474f"], "effect": "简约", "glow": False},
+    "凋零": {"palette": ["#8d6e63","#795548","#6d4c41","#5d4037","#90a4ae"], "effect": "简约", "glow": False},
+    "逝去": {"palette": ["#90a4ae","#78909c","#607d8b","#455a64","#37474f"], "effect": "简约", "glow": False},
+    "崩塌": {"palette": ["#546e7a","#455a64","#37474f","#263238","#bf360c"], "effect": "3D立体", "glow": False},
+    "断裂": {"palette": ["#546e7a","#455a64","#37474f","#263238","#1a1a1a"], "effect": "简约", "glow": False},
+    "破碎": {"palette": ["#78909c","#607d8b","#546e7a","#ff1744","#880000"], "effect": "多层描边", "glow": False},
+    "坍塌": {"palette": ["#546e7a","#455a64","#263238","#37474f","#8d6e63"], "effect": "3D立体", "glow": False},
+
+    # ── 旋转/循环 ────────────────────────────────────────
+    "旋转": {"palette": ["#7c4dff","#aa00ff","#00e5ff","#ff4081","#ffd54f"], "effect": "霓虹发光", "glow": True},
+    "漩涡": {"palette": ["#7c4dff","#aa00ff","#00e5ff","#1a1a2e","#000000"], "effect": "霓虹发光", "glow": True},
+    "循环": {"palette": ["#7c4dff","#00e5ff","#1de9b6","#69ff47","#ffd54f"], "effect": "双色渐变", "glow": True},
+    "无限循环": {"palette": ["#7c4dff","#aa00ff","#00e5ff","#1de9b6","#000000"], "effect": "霓虹发光", "glow": True},
+    "螺旋": {"palette": ["#7c4dff","#aa00ff","#d500f9","#00e5ff","#1a1a2e"], "effect": "霓虹发光", "glow": True},
+    "轮回": {"palette": ["#7c4dff","#aa00ff","#ffd54f","#ffb300","#1a237e"], "effect": "霓虹发光", "glow": True},
+    "转化": {"palette": ["#7c4dff","#aa00ff","#1de9b6","#69ff47","#ff4081"], "effect": "双色渐变", "glow": True},
+}

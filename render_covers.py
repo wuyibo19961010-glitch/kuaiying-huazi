@@ -19,22 +19,17 @@ PKG_DIR = os.path.join(HERE, "花字输出结果")
 
 
 def _find_font() -> str:
-    """定位字体文件，本地优先，云端自动下载"""
+    """每次调用时实时定位字体，兼容开发目录和发布包目录"""
     base = os.path.dirname(os.path.abspath(__file__))
-    # 本地开发路径
-    for candidate in [
-        os.path.join(base, "字体资源", "标准字体.ttf"),
-        os.path.join(os.path.dirname(base), "字体资源", "标准字体.ttf"),
-    ]:
-        if os.path.exists(candidate):
-            return candidate
-    # 云端：下载到 /tmp
-    cached = "/tmp/标准字体.ttf"
-    if not os.path.exists(cached):
-        import urllib.request
-        url = "https://github.com/wuyibo19961010-glitch/kuaiying-huazi/releases/download/font/标准字体.ttf"
-        urllib.request.urlretrieve(url, cached)
-    return cached
+    # 优先同级目录
+    p = os.path.join(base, "字体资源", "标准字体.ttf")
+    if os.path.exists(p):
+        return p
+    # 兼容开发目录：上一级
+    p2 = os.path.join(os.path.dirname(base), "字体资源", "标准字体.ttf")
+    if os.path.exists(p2):
+        return p2
+    return p  # 找不到时返回同级路径，让 Pillow 给出明确报错
 
 W = H = 300
 BG = (26, 26, 26)
@@ -192,11 +187,12 @@ def render_cover(info, output_path, text_str=None):
     # ── 3. 3D厚度侧面（在主体之前画） ──
     if thickness > 0.01:
         depth = max(1, int(thickness * 5 * FONT_SIZE / 160))
+        thickness_base = text_color
         for d in range(depth, 0, -1):
             side = Image.new("RGBA", (W, H), (0, 0, 0, 0))
             sd_draw = ImageDraw.Draw(side)
             darken = 0.35 + 0.25 * (d / depth)
-            side_color = tuple(int(c * darken) for c in text_color)
+            side_color = tuple(int(c * darken) for c in thickness_base)
 
             # 描边侧面
             for s in reversed(strokes):
@@ -210,16 +206,26 @@ def render_cover(info, output_path, text_str=None):
             sd_draw.text((cx, cy + d), TEXT, font=f, fill=(*side_color, 255))
             img = Image.alpha_composite(img, side)
 
-    # ── 4. 描边（从外到内渲染） ──
+    # ── 4. 描边（从外到内渲染，支持 offset_x/offset_y 和 fullfillBias 偏移） ──
     scale = FONT_SIZE / 160
     for s in reversed(strokes):
         sw = max(1, int(s.get('width', 0) * scale))
         sc = hex_to_rgb(s.get('color', '#ffffff'))
         sa = s.get('alpha', 255)
+        # 优先读取 offset_x/offset_y，再 fallback 到 fullfillBias.x/y
+        ox = s.get('offset_x', None)
+        oy = s.get('offset_y', None)
+        if ox is not None or oy is not None:
+            bx = int(float(ox or 0) * scale)
+            by = int(float(oy or 0) * scale)
+        else:
+            bias = s.get('fullfillBias') or {}
+            bx = int(float(bias.get('x', 0)) * scale) if isinstance(bias, dict) else 0
+            by = int(float(bias.get('y', 0)) * scale) if isinstance(bias, dict) else 0
 
         stroke_layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         sd_draw = ImageDraw.Draw(stroke_layer)
-        sd_draw.text((cx, cy), TEXT, font=f,
+        sd_draw.text((cx + bx, cy + by), TEXT, font=f,
                      fill=(0, 0, 0, 0), stroke_width=sw, stroke_fill=(*sc, sa))
 
         img = Image.alpha_composite(img, stroke_layer)

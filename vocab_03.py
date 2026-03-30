@@ -1,0 +1,103 @@
+# vocab_03.py — 冷暖色调词（100词）
+
+VOCAB_03 = {
+    # ── 暖色系 ────────────────────────────────────────
+    "暖": {"palette": ["#fff9c4","#ffcc80","#ffab91","#ff8a65","#ff5722"], "effect": "双色渐变", "glow": False},
+    "暖色": {"palette": ["#fff9c4","#ffcc80","#ff8a65","#ff5722","#e64a19"], "effect": "双色渐变", "glow": False},
+    "暖调": {"palette": ["#fff8e1","#ffe082","#ffb74d","#ff8a65","#f4511e"], "effect": "双色渐变", "glow": False},
+    "暖意": {"palette": ["#fff9c4","#ffcc80","#ffb74d","#ffa726","#ff8f00"], "effect": "双色渐变", "glow": False},
+    "暖黄": {"palette": ["#fffde7","#fff9c4","#fff176","#ffee58","#fdd835"], "effect": "双色渐变", "glow": False},
+    "暖橙": {"palette": ["#fff3e0","#ffe0b2","#ffcc80","#ffb74d","#ffa726"], "effect": "双色渐变", "glow": False},
+    "暖红": {"palette": ["#ffebee","#ffcdd2","#ef9a9a","#e57373","#f44336"], "effect": "双色渐变", "glow": False},
+    "暖光": {"palette": ["#fff9c4","#ffe082","#ffb74d","#ff8a65","#ff5722"], "effect": "双色渐变", "glow": True},
+    "暖阳": {"palette": ["#fffde7","#fff9c4","#ffee58","#fdd835","#f9a825"], "effect": "双色渐变", "glow": True},
+    "温暖": {"palette": ["#fff9c4","#ffcc80","#ff8a65","#e91e63","#f48fb1"], "effect": "双色渐变", "glow": False},
+    "温热": {"palette": ["#ffccbc","#ffab91","#ff8a65","#ff7043","#f4511e"], "effect": "双色渐变", "glow": False},
+    "热": {"palette": ["#ff6d00","#ff3d00","#dd2c00","#bf360c","#7f0000"], "effect": "霓虹发光", "glow": True},
+    "炙热": {"palette": ["#ff6d00","#ff3d00","#dd2c00","#bf360c","#4a0000"], "effect": "霓虹发光", "glow": True},
+    "燥热": {"palette": ["#bf360c","#e64a19","#ff5722","#ff8a65","#ffccbc"], "effect": "霓虹发光", "glow": True},
+    "灼热": {"palette": ["#ff3d00","#ff6d00","#ff8f00","#ffd54f","#ffffff"], "effect": "霓虹发光", "glow": True},
+
+    # ── 冷色系 ────────────────────────────────────────
+    "冷": {"palette": ["#e3f2fd","#90caf9","#42a5f5","#1976d2","#0d47a1"], "effect": "双色渐变", "glow": False},
+    "冷色": {"palette": ["#e3f2fd","#90caf9","#42a5f5","#1565c0","#0d47a1"], "effect": "双色渐变", "glow": False},
+    "冷调": {"palette": ["#e1f5fe","#b3e5fc","#81d4fa","#0288d1","#01579b"], "effect": "双色渐变", "glow": False},
+    "冷酷": {"palette": ["#1a237e","#0d47a1","#01579b","#006064","#004d40"], "effect": "3D立体", "glow": False},
+    "冰冷": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#64b5f6","#1976d2"], "effect": "霓虹发光", "glow": True},
+    "冰凉": {"palette": ["#e3f2fd","#b3e5fc","#81d4fa","#4fc3f7","#0288d1"], "effect": "双色渐变", "glow": False},
+    "清冷": {"palette": ["#e8eaf6","#c5cae9","#9fa8da","#5c6bc0","#3949ab"], "effect": "双色渐变", "glow": False},
+    "冷峻": {"palette": ["#37474f","#263238","#1a237e","#0d47a1","#006064"], "effect": "3D立体", "glow": False},
+    "寒冷": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#1565c0","#0a237e"], "effect": "霓虹发光", "glow": True},
+    "凛冽": {"palette": ["#e3f2fd","#bbdefb","#1976d2","#0d47a1","#002171"], "effect": "霓虹发光", "glow": True},
+    "严寒": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#1565c0","#0d47a1"], "effect": "霓虹发光", "glow": True},
+    "冷蓝": {"palette": ["#1a237e","#1565c0","#1976d2","#42a5f5","#90caf9"], "effect": "双色渐变", "glow": True},
+    "冷绿": {"palette": ["#e0f2f1","#b2dfdb","#80cbc4","#4db6ac","#26a69a"], "effect": "双色渐变", "glow": False},
+    "冷紫": {"palette": ["#4a148c","#6a1b9a","#7b1fa2","#9c27b0","#ce93d8"], "effect": "双色渐变", "glow": True},
+    "冷白": {"palette": ["#e3f2fd","#bbdefb","#e0f2f1","#ffffff","#e8eaf6"], "effect": "简约", "glow": False},
+
+    # ── 中性色 ────────────────────────────────────────
+    "中性": {"palette": ["#eceff1","#cfd8dc","#b0bec5","#90a4ae","#607d8b"], "effect": "简约", "glow": False},
+    "清爽": {"palette": ["#e0f7fa","#b2ebf2","#80deea","#4dd0e1","#26c6da"], "effect": "双色渐变", "glow": False},
+    "清凉": {"palette": ["#e0f2f1","#b2dfdb","#80cbc4","#4db6ac","#009688"], "effect": "双色渐变", "glow": False},
+    "清新": {"palette": ["#e8f5e9","#c8e6c9","#a5d6a7","#81c784","#66bb6a"], "effect": "双色渐变", "glow": False},
+    "清爽感": {"palette": ["#e0f7fa","#b2ebf2","#80deea","#00bcd4","#0097a7"], "effect": "双色渐变", "glow": False},
+    "清淡": {"palette": ["#f1f8e9","#dcedc8","#c5e1a5","#aed581","#9ccc65"], "effect": "简约", "glow": False},
+    "淡雅": {"palette": ["#fce4ec","#f8bbd0","#e1bee7","#c5cae9","#bbdefb"], "effect": "双色渐变", "glow": False},
+    "淡彩": {"palette": ["#fce4ec","#e8eaf6","#e3f2fd","#e0f7fa","#e8f5e9"], "effect": "双色渐变", "glow": False},
+    "淡色": {"palette": ["#f8bbd0","#e1bee7","#bbdefb","#b2dfdb","#dcedc8"], "effect": "双色渐变", "glow": False},
+    "浅色": {"palette": ["#fce4ec","#f3e5f5","#e3f2fd","#e0f7fa","#e8f5e9"], "effect": "简约", "glow": False},
+
+    # ── 橙色系 ────────────────────────────────────────
+    "橙色": {"palette": ["#fff3e0","#ffcc80","#ffa726","#ff6d00","#e65100"], "effect": "双色渐变", "glow": False},
+    "橙": {"palette": ["#fff3e0","#ffcc80","#ff9800","#ff6d00","#e65100"], "effect": "双色渐变", "glow": False},
+    "橙红": {"palette": ["#ff6d00","#ff3d00","#dd2c00","#bf360c","#7f0000"], "effect": "双色渐变", "glow": True},
+    "橙黄": {"palette": ["#fff9c4","#ffee58","#fdd835","#ff8f00","#ff6d00"], "effect": "双色渐变", "glow": False},
+    "暖橘": {"palette": ["#fff3e0","#ffcc80","#ffb74d","#ffa726","#ff8f00"], "effect": "双色渐变", "glow": False},
+    "橘色": {"palette": ["#fff3e0","#ffcc80","#ffa726","#f57c00","#e65100"], "effect": "双色渐变", "glow": False},
+    "橘红": {"palette": ["#ff6d00","#ff3d00","#bf360c","#880000","#4a0000"], "effect": "霓虹发光", "glow": True},
+    "橘黄": {"palette": ["#fff9c4","#ffee58","#ffb300","#ff6d00","#e65100"], "effect": "双色渐变", "glow": False},
+
+    # ── 黄色系 ────────────────────────────────────────
+    "黄色": {"palette": ["#fffde7","#fff9c4","#ffee58","#fdd835","#f9a825"], "effect": "双色渐变", "glow": False},
+    "黄": {"palette": ["#fffde7","#fff9c4","#ffee58","#fdd835","#f9a825"], "effect": "双色渐变", "glow": False},
+    "金黄": {"palette": ["#fff9c4","#ffe082","#ffd54f","#ffb300","#ff6f00"], "effect": "浮雕", "glow": True},
+    "鹅黄": {"palette": ["#fffde7","#fff9c4","#fff59d","#fff176","#ffee58"], "effect": "双色渐变", "glow": False},
+    "柠黄": {"palette": ["#fffde7","#fff9c4","#ffee58","#cddc39","#afb42b"], "effect": "双色渐变", "glow": False},
+    "姜黄": {"palette": ["#f9a825","#f57f17","#e65100","#bf360c","#8d6e63"], "effect": "双色渐变", "glow": False},
+
+    # ── 红色系 ────────────────────────────────────────
+    "红色": {"palette": ["#ffebee","#ef9a9a","#e57373","#f44336","#b71c1c"], "effect": "双色渐变", "glow": False},
+    "红": {"palette": ["#ffcdd2","#ef9a9a","#e57373","#c62828","#b71c1c"], "effect": "双色渐变", "glow": False},
+    "大红": {"palette": ["#ff1744","#d50000","#c62828","#b71c1c","#7f0000"], "effect": "霓虹发光", "glow": True},
+    "深红": {"palette": ["#b71c1c","#880000","#6a0000","#4a0000","#1a0000"], "effect": "浮雕", "glow": False},
+    "玫红": {"palette": ["#fce4ec","#f48fb1","#e91e63","#c2185b","#880e4f"], "effect": "双色渐变", "glow": False},
+    "绯红": {"palette": ["#ff1744","#f50057","#d500f9","#e91e63","#c2185b"], "effect": "霓虹发光", "glow": True},
+    "朱红": {"palette": ["#ff6d00","#ff3d00","#dd2c00","#bf360c","#870000"], "effect": "双色渐变", "glow": False},
+    "酒红": {"palette": ["#880e4f","#6a0028","#4a0032","#1a0010","#000000"], "effect": "浮雕", "glow": False},
+    "砖红": {"palette": ["#bf360c","#a1300c","#7f2800","#5c1a00","#3e0a00"], "effect": "浮雕", "glow": False},
+    "胭脂": {"palette": ["#880e4f","#ad1457","#c2185b","#e91e63","#f48fb1"], "effect": "双色渐变", "glow": False},
+
+    # ── 蓝色系 ────────────────────────────────────────
+    "蓝色": {"palette": ["#e3f2fd","#90caf9","#42a5f5","#1976d2","#0d47a1"], "effect": "双色渐变", "glow": False},
+    "蓝": {"palette": ["#e3f2fd","#90caf9","#2196f3","#1565c0","#0d47a1"], "effect": "双色渐变", "glow": False},
+    "深蓝": {"palette": ["#0d47a1","#1a237e","#000051","#00003b","#000021"], "effect": "3D立体", "glow": True},
+    "浅蓝": {"palette": ["#e3f2fd","#bbdefb","#90caf9","#64b5f6","#42a5f5"], "effect": "双色渐变", "glow": False},
+    "天蓝": {"palette": ["#e1f5fe","#b3e5fc","#81d4fa","#29b6f6","#039be5"], "effect": "双色渐变", "glow": False},
+    "宝蓝": {"palette": ["#1565c0","#1976d2","#2196f3","#42a5f5","#90caf9"], "effect": "双色渐变", "glow": True},
+    "海蓝": {"palette": ["#01579b","#0277bd","#0288d1","#039be5","#29b6f6"], "effect": "双色渐变", "glow": False},
+    "靛蓝": {"palette": ["#1a237e","#283593","#303f9f","#3949ab","#3f51b5"], "effect": "双色渐变", "glow": False},
+    "孔雀蓝": {"palette": ["#006064","#00838f","#0097a7","#00acc1","#26c6da"], "effect": "双色渐变", "glow": True},
+    "宇宙蓝": {"palette": ["#1a237e","#000051","#1b0080","#1a0080","#0d004a"], "effect": "霓虹发光", "glow": True},
+
+    # ── 绿色系 ────────────────────────────────────────
+    "绿色": {"palette": ["#e8f5e9","#a5d6a7","#66bb6a","#43a047","#2e7d32"], "effect": "双色渐变", "glow": False},
+    "绿": {"palette": ["#e8f5e9","#a5d6a7","#4caf50","#2e7d32","#1b5e20"], "effect": "双色渐变", "glow": False},
+    "草绿": {"palette": ["#f1f8e9","#dcedc8","#c5e1a5","#aed581","#8bc34a"], "effect": "双色渐变", "glow": False},
+    "深绿": {"palette": ["#1b5e20","#2e7d32","#1a3a1a","#0a1f0a","#000000"], "effect": "浮雕", "glow": False},
+    "翠绿": {"palette": ["#b9f6ca","#69f0ae","#00e676","#00c853","#00a152"], "effect": "霓虹发光", "glow": True},
+    "墨绿": {"palette": ["#1b5e20","#1a3f1a","#0a2a0a","#061306","#000000"], "effect": "浮雕", "glow": False},
+    "荧光绿": {"palette": ["#69ff47","#76ff03","#b2ff59","#ccff90","#00e676"], "effect": "霓虹发光", "glow": True},
+    "薄荷绿": {"palette": ["#e0f2f1","#b2dfdb","#80cbc4","#4db6ac","#26a69a"], "effect": "双色渐变", "glow": False},
+    "橄榄绿": {"palette": ["#827717","#9e9d24","#afb42b","#c6ca53","#e6ee9c"], "effect": "简约", "glow": False},
+    "苔绿": {"palette": ["#558b2f","#689f38","#7cb342","#8bc34a","#aed581"], "effect": "简约", "glow": False},
+}
